@@ -12,6 +12,16 @@ public class SubscriptionModel {
 	private BigDecimal totalAmount;
 	private String[] invoiceDates;
 
+	public SubscriptionModel() {}
+	public SubscriptionModel(String customerName, SubscriptionType type, String dayOfDate, String startDate, String endDate, BigDecimal amount) {
+		this.customerName = customerName;
+		this.type = type;
+		this.dayOfDate = dayOfDate;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.amount = amount;
+	}
+	
 	public SubscriptionType getType() {
 		return type;
 	}
