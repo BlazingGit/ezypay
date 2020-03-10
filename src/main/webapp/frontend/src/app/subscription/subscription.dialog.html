@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Subscription Have Been Created!</h1>
+<div mat-dialog-content class="text-wrap">
+	<p><label class="font-weight-bold">Customer Name: </label> {{data.customerName}}</p>
+	<p><label class="font-weight-bold">Subscription Type: </label> {{data.type}}</p>
+	<p><label class="font-weight-bold">Amount: </label> RM {{data.amount}}</p>
+	<p><label class="font-weight-bold">Total Amount: </label> RM {{data.totalAmount}}</p>
+	<p>
+		<label class="font-weight-bold">Invoice Dates: </label>
+		<span style="word-break: break-all;">{{displayDates(data.invoiceDates)}}</span>
+	</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+</div>

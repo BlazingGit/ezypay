@@ -1,6 +1,7 @@
 package com.ezypay.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ public class SubscriptionController {
 	private SubscriptionService subscriptionService;
 
 	@PostMapping(value = "add", produces = {"application/json"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:8049"})
     public SubscriptionModel addSubsription(@RequestBody SubscriptionModel model) {
 		SubscriptionModel result = null;
         try {
